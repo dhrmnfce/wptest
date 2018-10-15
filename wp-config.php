@@ -19,48 +19,51 @@ if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROT
  * @package WordPress
  */
 
+define('WP_MEMORY_LIMIT', '256M');
+
 /*  C9 DATABASE SETTINGS IF HEROKU STUFF GOES WRONG
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-/* define('DB_NAME', 'c9');
-
-/** MySQL database username */
-/*define('DB_USER', substr(getenv('C9_USER'), 0, 16));
-
-/** MySQL database password */
-/*define('DB_PASSWORD', '');
-
-/** MySQL hostname */
-/*define('DB_HOST', getenv('IP'));
-
-/** Database Charset to use in creating database tables. */
-/*define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-/*define('DB_COLLATE', '');
-
-
-/* HEROKU DATABASE STUFF
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'heroku_c82c25edb3ceb64');
+define('DB_NAME', 'c9');
 
 /** MySQL database username */
-define('DB_USER', 'b120d9bdabce05');
+define('DB_USER', substr(getenv('C9_USER'), 0, 16));
 
 /** MySQL database password */
-define('DB_PASSWORD', '99d9fbe0');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', 'us-cdbr-iron-east-01.cleardb.net');
+define('DB_HOST', getenv('IP'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+
+/* HEROKU DATABASE STUFF
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+/*define('DB_NAME', 'heroku_c82c25edb3ceb64');
+
+/** MySQL database username */
+/*define('DB_USER', 'b120d9bdabce05');
+
+/** MySQL database password */
+/*define('DB_PASSWORD', '99d9fbe0');
+
+/** MySQL hostname */
+/*define('DB_HOST', 'us-cdbr-iron-east-01.cleardb.net');
+
+/** Database Charset to use in creating database tables. */
+/*define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+/*define('DB_COLLATE', '');
 
 
 
@@ -116,3 +119,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/*define('WP_HOME', 'https://secret-refuge-25479.herokuapp.com');
+/*define('WP_SITEURL', 'https://secret-refuge-25479.herokuapp.com');
